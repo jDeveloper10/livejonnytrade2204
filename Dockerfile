@@ -6,8 +6,7 @@ FROM owncast/owncast:latest
 EXPOSE 8080
 EXPOSE 1935
 
-# Punto de montaje para PERSISTENCIA (Obligatorio en Railway Volume)
-# Railway Volume debe apuntar a /app/data
-VOLUME ["/app/data"]
+# Punto de montaje para PERSISTENCIA (Manejado por Railway Volumes)
+# Ya configuraste el volumen en el panel, así que no hace falta declararlo aquí.
 
 ENTRYPOINT ["/app/owncast"]
